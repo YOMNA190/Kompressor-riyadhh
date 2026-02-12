@@ -163,7 +163,6 @@
         .seo-text-content { background-color: #F9FAFB; border-radius: 16px; padding: 2rem; margin-top: 2rem; border-right: 6px solid var(--primary-gold); line-height: 1.9; }
         .seo-text-content h2 { color: var(--text-dark); font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
         .seo-text-content p { color: #4B5563; margin-bottom: 1rem; }
-        .badge-offer { background: linear-gradient(135deg, #FF6B6B, #EE5A24); color: white; padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.9rem; font-weight: 700; display: inline-block; box-shadow: 0 4px 10px rgba(238, 90, 36, 0.3); }
     </style> 
 </head>
 <body>
@@ -176,15 +175,23 @@
     <!-- مودال عرض الرقم -->
     <div id="phoneModal" class="phone-modal">
         <div class="phone-modal-content">
-            <h3>📞 اتصل بنا الآن</h3>
-            <p>فريقنا جاهز لخدمتك 24/7</p>
-            <span id="displayPhoneNumber" class="phone-number-large">+966576572402</span>
-            <div class="modal-buttons">
-                <button id="copyBtn" class="copy-btn"><i class="fas fa-copy"></i> نسخ الرقم</button>
-                <a href="tel:+966576572402" class="copy-btn"><i class="fas fa-phone"></i> اتصال مباشر</a>
-                <button id="closeModal" class="close-btn">إغلاق</button>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">📞 اتصل بنا الآن</h3>
+            <p class="text-gray-600 mb-4">فريقنا جاهز لخدمتك 24/7</p>
+            <span id="displayPhoneNumber" class="text-3xl font-black text-gray-900 block mb-6 tracking-wider dir-ltr">+966576572402</span>
+            <div class="flex gap-3 justify-center flex-wrap">
+                <button id="copyBtn" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2">
+                    <i class="fas fa-copy"></i> نسخ الرقم
+                </button>
+                <a href="tel:+966576572402" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold transition-all flex items-center gap-2">
+                    <i class="fas fa-phone"></i> اتصال مباشر
+                </a>
+                <button id="closeModal" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-xl font-bold transition-all">
+                    إغلاق
+                </button>
             </div>
-            <div id="copySuccess" class="copy-success"><i class="fas fa-check-circle"></i> تم نسخ الرقم</div>
+            <div id="copySuccess" class="text-green-600 mt-4 font-semibold hidden">
+                <i class="fas fa-check-circle"></i> تم نسخ الرقم بنجاح
+            </div>
         </div>
     </div>
 
@@ -215,7 +222,10 @@
         <div class="container-custom">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 reveal">
-                    <div class="hero-badge"><i class="fas fa-star mr-2"></i><span>الخيار الأول في الرياض</span></div>
+                    <div class="hero-badge">
+                        <i class="fas fa-star ml-2"></i>
+                        <span>الخيار الأول في الرياض</span>
+                    </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-gray-900">
                         أفضل <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">شركة تسليك مجاري</span> بالرياض
                     </h1>
@@ -223,30 +233,48 @@
                         🚀 خدمة 24 ساعة | ⏱️ استجابة 30 دقيقة | 🔧 ضمان 30 يوم
                     </p>
                     
-                    <!-- ✅ تحسين: عرض أقوى للخدمات الأساسية -->
+                    <!-- عرض الخدمات الأساسية -->
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-500 ml-1"></i> تسليك مجاري</span>
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-500 ml-1"></i> شفط بيارات</span>
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-500 ml-1"></i> تنظيف خزانات</span>
+                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                            <i class="fas fa-check-circle text-green-500 ml-1"></i> تسليك مجاري
+                        </span>
+                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                            <i class="fas fa-check-circle text-green-500 ml-1"></i> شفط بيارات
+                        </span>
+                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                            <i class="fas fa-check-circle text-green-500 ml-1"></i> تنظيف خزانات
+                        </span>
                     </div>
                     
                     <div class="flex flex-wrap gap-4">
                         <button class="btn-primary px-8 py-4 rounded-xl text-xl font-bold call-button">
-                            <span class="flex items-center gap-3"><i class="fas fa-phone-volume"></i> طلب خدمة فورية</span>
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-phone-volume"></i> طلب خدمة فورية
+                            </span>
                         </button>
                         <a href="#services" class="btn-secondary px-7 py-4 rounded-xl text-xl font-bold">
-                            <span class="flex items-center gap-3"><i class="fas fa-info-circle"></i> الخدمات</span>
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-info-circle"></i> الخدمات
+                            </span>
                         </a>
                     </div>
                     
-                    <!-- عرض عدد العملاء بشكل جذاب -->
+                    <!-- عرض عدد العملاء -->
                     <div class="mt-8 flex items-center gap-4">
                         <div class="flex -space-x-2">
-                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center"><i class="fas fa-user text-amber-600 text-xs"></i></div>
-                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center"><i class="fas fa-user text-amber-600 text-xs"></i></div>
-                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center"><i class="fas fa-user text-amber-600 text-xs"></i></div>
+                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center">
+                                <i class="fas fa-user text-amber-600 text-xs"></i>
+                            </div>
+                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center">
+                                <i class="fas fa-user text-amber-600 text-xs"></i>
+                            </div>
+                            <div class="w-8 h-8 bg-amber-100 rounded-full border-2 border-white flex items-center justify-center">
+                                <i class="fas fa-user text-amber-600 text-xs"></i>
+                            </div>
                         </div>
-                        <span class="text-gray-600 font-medium"><span class="font-bold text-gray-900">+500</span> عميل واثق</span>
+                        <span class="text-gray-600 font-medium">
+                            <span class="font-bold text-gray-900">+500</span> عميل واثق
+                        </span>
                     </div>
                 </div>
                 
@@ -256,16 +284,31 @@
                         <div class="absolute -bottom-6 -left-6 w-64 h-64 bg-primary-gold opacity-10 rounded-full"></div>
                         <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 stats-card">
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-clock text-white text-2xl"></i></div>
-                                <div><h3 class="text-xl font-bold text-gray-900">خدمة 24/7</h3><p class="text-gray-600">طوال أيام الأسبوع</p></div>
+                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md">
+                                    <i class="fas fa-clock text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">خدمة 24/7</h3>
+                                    <p class="text-gray-600">طوال أيام الأسبوع</p>
+                                </div>
                             </div>
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-truck text-white text-2xl"></i></div>
-                                <div><h3 class="text-xl font-bold text-gray-900">وصول سريع</h3><p class="text-gray-600">خلال 30-60 دقيقة</p></div>
+                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md">
+                                    <i class="fas fa-truck text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">وصول سريع</h3>
+                                    <p class="text-gray-600">خلال 30-60 دقيقة</p>
+                                </div>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md"><i class="fas fa-shield-alt text-white text-2xl"></i></div>
-                                <div><h3 class="text-xl font-bold text-gray-900">ضمان 30 يوم</h3><p class="text-gray-600">على جميع الخدمات</p></div>
+                                <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center shadow-md">
+                                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">ضمان 30 يوم</h3>
+                                    <p class="text-gray-600">على جميع الخدمات</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -274,16 +317,18 @@
         </div>
     </section>
 
-    <!-- ===== خدماتنا الأساسية ===== -->
+    <!-- ===== خدماتنا الأساسية (بدون أسعار) ===== -->
     <section id="services" class="section-padding slant-bg">
         <div class="container-custom">
             <div class="text-center mb-16 reveal">
                 <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">خدماتنا المتخصصة</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">نركز على 3 خدمات فقط، نقدمها باحترافية وجودة عالمية</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">
+                    نركز على 3 خدمات فقط، نقدمها باحترافية وجودة عالمية
+                </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 1. تسليك المجاري بالكمبروسر -->
+                <!-- 1. تسليك المجاري بالكمبروسر - بدون سعر -->
                 <div class="service-card reveal">
                     <img src="assets/hydro-jetting-drain-cleaning.webp" alt="تسليك مجاري بالكمبروسر الرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
@@ -291,14 +336,14 @@
                         <p class="text-gray-600 mb-4 leading-relaxed">
                             ضغط ماء يصل إلى 4000 PSI • بدون تكسير • ضمان 30 يوم
                         </p>
-                        <!-- ✅ تم إزالة الأسعار نهائياً -->
+                        <!-- ✅ الأسعار تمت إزالتها نهائياً -->
                         <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-2 flex items-center gap-2">
                             <i class="fas fa-phone"></i> اطلب الخدمة
                         </button>
                     </div>
                 </div>
 
-                <!-- 2. شفط وتنظيف البيارات -->
+                <!-- 2. شفط وتنظيف البيارات - بدون سعر -->
                 <div class="service-card reveal" style="transition-delay: 200ms;">
                     <img src="assets/sewage-truck-riyadh.webp" alt="وايت شفط بيارات بالرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
@@ -306,13 +351,14 @@
                         <p class="text-gray-600 mb-4 leading-relaxed">
                             أحدث شاحنات الشفط • تعقيم كامل • التخلص الآمن
                         </p>
+                        <!-- ✅ الأسعار تمت إزالتها نهائياً -->
                         <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-2 flex items-center gap-2">
                             <i class="fas fa-phone"></i> اطلب الخدمة
                         </button>
                     </div>
                 </div>
 
-                <!-- 3. تنظيف وتعقيم الخزانات -->
+                <!-- 3. تنظيف وتعقيم الخزانات - بدون سعر -->
                 <div class="service-card reveal" style="transition-delay: 400ms;">
                     <img src="assets/water-tank-cleaning-riyadh.webp" alt="تنظيف خزانات المياه بالرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
@@ -320,6 +366,7 @@
                         <p class="text-gray-600 mb-4 leading-relaxed">
                             مواد معتمدة • شهادة صحية • خزانات أرضية وعلوية
                         </p>
+                        <!-- ✅ الأسعار تمت إزالتها نهائياً -->
                         <button class="call-button btn-outline px-6 py-3 rounded-lg font-bold mt-2 flex items-center gap-2">
                             <i class="fas fa-phone"></i> اطلب الخدمة
                         </button>
@@ -373,7 +420,9 @@
         <div class="container-custom">
             <div class="text-center mb-16 reveal">
                 <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">نغطي جميع أحياء الرياض</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-6">وين ما كنت في الرياض، نصلك ونخدمك بسرعة</p>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-6">
+                    وين ما كنت في الرياض، نصلك ونخدمك بسرعة
+                </p>
             </div>
             <div class="max-w-5xl mx-auto reveal">
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-4 text-gray-700">
@@ -390,7 +439,9 @@
                     <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي الشفا</span></div>
                     <div class="flex items-center gap-3"><i class="fas fa-map-marker-alt text-primary-gold"></i><span>حي العليا</span></div>
                 </div>
-                <div class="text-center mt-8 font-semibold text-gray-600">... وأكثر من 20 حي آخر</div>
+                <div class="text-center mt-8 font-semibold text-gray-600">
+                    ... وأكثر من 20 حي آخر
+                </div>
             </div>
         </div>
     </section>
@@ -404,7 +455,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div class="testimonial-card p-8 reveal">
                     <i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i>
-                    <p class="text-gray-700 mb-6 leading-relaxed">"ما قصروا والله، فكوا لي سدة المطبخ في أقل من ساعة. شغل نظيف وسريع."</p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "ما قصروا والله، فكوا لي سدة المطبخ في أقل من ساعة. شغل نظيف وسريع."
+                    </p>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                         <p class="font-bold text-gray-900">أبو سليمان</p>
                         <p class="text-sm text-primary-gold">حي الصحافة</p>
@@ -412,7 +465,9 @@
                 </div>
                 <div class="testimonial-card p-8 reveal" style="transition-delay: 150ms;">
                     <i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i>
-                    <p class="text-gray-700 mb-6 leading-relaxed">"نظفوا لي الخزان الأرضي وجددوه، صار زي الجديد. شكراً لكم."</p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "نظفوا لي الخزان الأرضي وجددوه، صار زي الجديد. شكراً لكم."
+                    </p>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                         <p class="font-bold text-gray-900">أم محمد</p>
                         <p class="text-sm text-primary-gold">حي الياسمين</p>
@@ -420,7 +475,9 @@
                 </div>
                 <div class="testimonial-card p-8 reveal" style="transition-delay: 300ms;">
                     <i class="fas fa-quote-right text-3xl text-primary-gold mb-4"></i>
-                    <p class="text-gray-700 mb-6 leading-relaxed">"شفطوا لي البيارة بسرعة وأسعارهم مناسبة، أنصح فيهم وبقوة."</p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "شفطوا لي البيارة بسرعة وأسعارهم مناسبة، أنصح فيهم وبقوة."
+                    </p>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                         <p class="font-bold text-gray-900">خالد العتيبي</p>
                         <p class="text-sm text-primary-gold">حي الرمال</p>
@@ -430,14 +487,18 @@
         </div>
     </section>
 
-    <!-- ===== محتوى SEO - بدون أسعار ===== -->
+    <!-- ===== محتوى SEO - قوي جداً للتصدر ===== -->
     <section class="section-padding pt-0">
         <div class="container-custom">
             <div class="seo-text-content">
                 <h2>🏆 شركة كمبروسور اكسبريس - أفضل شركة تسليك مجاري بالرياض</h2>
-                <p>هل تبحث عن <strong>أفضل شركة تسليك مجاري بالرياض</strong>؟ مع <strong>كمبروسور اكسبريس</strong> ودّع مشاكل انسداد المجاري للأبد. نستخدم أحدث <strong>أجهزة الكمبروسر الألمانية</strong> بقوة ضغط تصل إلى 4000 PSI لإزالة أصعب الانسدادات بدون تكسير ولا فوضى.</p>
-                <p>خدماتنا تشمل: <strong>تسليك مجاري</strong>، <strong>شفط بيارات</strong>، و<strong>تنظيف وتعقيم خزانات المياه</strong>. نغطي جميع أحياء الرياض (شمال - جنوب - شرق - غرب) ونصل إليك خلال 30-60 دقيقة فقط. فريقنا متاح 24 ساعة، 7 أيام في الأسبوع.</p>
-                <p>📞 <strong>اتصل الآن على 0576572402</strong> أو تواصل واتساب للحصول على معاينة مجانية وعرض سعر خاص.</p>
+                <p>هل تبحث عن <strong>أفضل شركة تسليك مجاري بالرياض</strong>؟ مع <strong>كمبروسور اكسبريس</strong> ودّع مشاكل انسداد المجاري للأبد. نستخدم أحدث <strong>أجهزة الكمبروسر الألمانية</strong> بقوة ضغط تصل إلى 4000 PSI لإزالة أصعب الانسدادات (دهون، جذور، أشياء صلبة) بدون تكسير ولا فوضى.</p>
+                
+                <p>خدماتنا الأساسية تشمل: <strong>تسليك مجاري</strong>، <strong>شفط بيارات</strong>، و<strong>تنظيف وتعقيم خزانات المياه</strong>. نغطي جميع أحياء الرياض (شمال - جنوب - شرق - غرب) ونصل إليك خلال 30-60 دقيقة فقط. فريقنا متاح 24 ساعة، 7 أيام في الأسبوع، 365 يوم في السنة.</p>
+                
+                <p>نحن لسنا مجرد شركة تسليك عادية، نحن <strong>خبراء الصرف الصحي</strong> في الرياض. نقدم ضمان 30 يوم على جميع خدماتنا لأننا نثق بجودة عملنا. نستخدم مواد معتمدة من وزارة الصحة السعودية لتنظيف وتعقيم الخزانات، ونوفر شهادات صحية مع كل خدمة.</p>
+                
+                <p>📞 <strong>اتصل الآن على 0576572402</strong> أو تواصل معنا عبر الواتساب. نقدم معاينة مجانية وعرض سعر خاص بدون أي التزام. فريقنا جاهز لخدمتك أينما كنت في الرياض.</p>
             </div>
         </div>
     </section>
@@ -446,7 +507,9 @@
     <section class="bg-gray-900">
         <div class="container-custom py-16 text-center">
             <h2 class="text-4xl font-extrabold text-white mb-4">📞 جاهز نخدمك؟</h2>
-            <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-8">اتصل بينا الحين وفريقنا يتوجه لك فوراً</p>
+            <p class="text-gray-300 text-xl max-w-2xl mx-auto mb-8">
+                اتصل بينا الحين وفريقنا يتوجه لك فوراً
+            </p>
             <button class="btn-primary px-10 py-4 rounded-xl text-2xl font-bold inline-block pulse-gold call-button">
                 <span class="flex items-center justify-center gap-3">
                     <i class="fas fa-phone fa-fw"></i> 0576572402
@@ -459,24 +522,30 @@
     <footer class="bg-white border-t border-border-light">
         <div class="container-custom py-8 text-center text-gray-600">
             <p class="mb-2">جميع الحقوق محفوظة &copy; <span id="copyright-year"></span> لـ كمبروسور اكسبريس</p>
-            <p class="text-sm">متخصصون في تسليك المجاري، شفط البيارات، وتنظيف الخزانات بالرياض | 0576572402</p>
+            <p class="text-sm">
+                متخصصون في تسليك المجاري، شفط البيارات، وتنظيف الخزانات بالرياض | 0576572402
+            </p>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
+        // تحديث سنة الحقوق
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
         
+        // رقم الهاتف
         const phoneNumber = '+966576572402';
         const phoneModal = document.getElementById('phoneModal');
         const copyBtn = document.getElementById('copyBtn');
         const closeModal = document.getElementById('closeModal');
         const copySuccess = document.getElementById('copySuccess');
 
+        // عرض المودال
         function showPhoneModal() {
             phoneModal.style.display = 'flex';
         }
 
+        // معالجة الاتصال
         function handleCall() {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 window.location.href = `tel:${phoneNumber}`;
@@ -485,26 +554,82 @@
             }
         }
 
-        document.querySelectorAll('.call-button').forEach(btn => btn.addEventListener('click', handleCall));
+        // ربط جميع أزرار الاتصال
+        document.querySelectorAll('.call-button').forEach(btn => {
+            btn.addEventListener('click', handleCall);
+        });
 
+        // نسخ الرقم
         copyBtn.addEventListener('click', function() {
             navigator.clipboard.writeText(phoneNumber).then(function() {
                 copySuccess.style.display = 'block';
-                setTimeout(() => copySuccess.style.display = 'none', 2000);
+                setTimeout(() => {
+                    copySuccess.style.display = 'none';
+                }, 2000);
             });
         });
 
-        closeModal.addEventListener('click', () => phoneModal.style.display = 'none');
-        phoneModal.addEventListener('click', (e) => { if (e.target === phoneModal) phoneModal.style.display = 'none'; });
+        // إغلاق المودال
+        closeModal.addEventListener('click', () => {
+            phoneModal.style.display = 'none';
+        });
 
-        // Reveal animation
+        // إغلاق المودال عند الضغط خارج المحتوى
+        phoneModal.addEventListener('click', (e) => {
+            if (e.target === phoneModal) {
+                phoneModal.style.display = 'none';
+            }
+        });
+
+        // أنيميشن الظهور عند التمرير
         function reveal() {
-            document.querySelectorAll(".reveal").forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add("active");
+            const reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add("active");
+                }
             });
         }
         window.addEventListener("scroll", reveal);
-        reveal();
+        reveal(); // تشغيل عند تحميل الصفحة
+        
+        // إغلاق المودال عند الضغط على ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && phoneModal.style.display === 'flex') {
+                phoneModal.style.display = 'none';
+            }
+        });
     </script>
+    
+    <style>
+        /* إضافة دعم للاتجاه من اليسار لليمين للأرقام */
+        .dir-ltr {
+            direction: ltr;
+            text-align: center;
+        }
+        
+        /* تحسين مظهر بطاقات الخدمات */
+        .service-card .btn-outline {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card .btn-outline:hover {
+            background-color: var(--primary-gold);
+            color: white;
+            border-color: var(--primary-gold);
+        }
+        
+        /* تحسين مظهر شارات الخدمات */
+        .bg-white.px-5.py-2.rounded-full {
+            transition: all 0.3s ease;
+        }
+        
+        .bg-white.px-5.py-2.rounded-full:hover {
+            border-color: var(--primary-gold);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+        }
+    </style>
 </body>
 </html>
