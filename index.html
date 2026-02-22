@@ -13,8 +13,11 @@
     <meta property="og:title" content="تسليك مجاري بالرياض | كمبروسور - خدمة 24 ساعة 0576572402">
     <meta property="og:description" content="خدمات تسليك المجاري، شفط البيارات، وتنظيف الخزانات في جميع أحياء الرياض. جهاز الكمبروسر. ضمان الجودة.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://compressor-express.com">
+    <meta property="og:url" content="https://kompressor-riyadhh.vercel.app">
     <meta property="og:locale" content="ar_SA">
+    
+    <!-- Canonical URL - مهم لتجنب المحتوى المكرر -->
+    <link rel="canonical" href="https://kompressor-riyadhh.vercel.app">
     
     <!-- Structured Data متقدم -->
     <script type="application/ld+json">
@@ -23,7 +26,7 @@
       "@type": "PlumbingService",
       "name": "كمبروسور - تسليك مجاري بالرياض",
       "description": "أفضل شركة تسليك مجاري وشفط بيارات وتنظيف خزانات في الرياض. خدمة 24/7، أسعار منافسة، ضمان 30 يوم.",
-      "url": "https://compressor-express.com",
+      "url": "https://kompressor-riyadhh.vercel.app",
       "telephone": "+966576572402",
       "priceRange": "$$",
       "areaServed": {
@@ -163,7 +166,45 @@
         .seo-text-content { background-color: #F9FAFB; border-radius: 16px; padding: 2rem; margin-top: 2rem; border-right: 6px solid var(--primary-gold); line-height: 1.9; }
         .seo-text-content h2 { color: var(--text-dark); font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
         .seo-text-content p { color: #4B5563; margin-bottom: 1rem; }
-    </style> 
+        
+        /* إضافة دعم للاتجاه من اليسار لليمين للأرقام */
+        .dir-ltr {
+            direction: ltr;
+            text-align: center;
+        }
+        
+        /* تحسين مظهر بطاقات الخدمات */
+        .service-card .btn-outline {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card .btn-outline:hover {
+            background-color: var(--primary-gold);
+            color: white;
+            border-color: var(--primary-gold);
+        }
+        
+        /* تحسين مظهر شارات الخدمات */
+        .bg-white.px-5.py-2.rounded-full {
+            transition: all 0.3s ease;
+        }
+        
+        .bg-white.px-5.py-2.rounded-full:hover {
+            border-color: var(--primary-gold);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+        }
+        
+        /* تنسيق قسم العودة لجميع الخدمات */
+        .back-to-all {
+            text-align: center;
+            margin-top: 2rem;
+            display: none;
+        }
+        
+        .back-to-all.show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -198,7 +239,7 @@
     <!-- الهيدر -->
     <header class="header-sticky fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300">
         <div class="container-custom flex justify-between items-center">
-            <a href="#" class="flex items-center gap-3">
+            <a href="/" class="flex items-center gap-3">
                 <div class="logo">ك</div>
                 <span class="text-gray-800 font-black text-2xl tracking-tight">كمبروسور</span>
             </a>
@@ -226,24 +267,27 @@
                         <i class="fas fa-star ml-2"></i>
                         <span>الخيار الأول في الرياض</span>
                     </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-gray-900">
+                    <h1 id="main-heading" class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-gray-900">
                         أفضل <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">شركة تسليك مجاري</span> بالرياض
                     </h1>
-                    <p class="text-xl mb-8 max-w-xl text-gray-600 leading-relaxed">
+                    <p id="main-description" class="text-xl mb-8 max-w-xl text-gray-600 leading-relaxed">
                         🚀 خدمة 24 ساعة | ⏱️ استجابة 30 دقيقة | 🔧 ضمان 30 يوم
                     </p>
                     
                     <!-- عرض الخدمات الأساسية -->
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                        <a href="/?service=drain-cleaning" class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold hover:border-amber-500 transition">
                             <i class="fas fa-check-circle text-green-500 ml-1"></i> تسليك مجاري
-                        </span>
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                        </a>
+                        <a href="/?service=septic-tank" class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold hover:border-amber-500 transition">
                             <i class="fas fa-check-circle text-green-500 ml-1"></i> شفط بيارات
-                        </span>
-                        <span class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold">
+                        </a>
+                        <a href="/?service=tank-cleaning" class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold hover:border-amber-500 transition">
                             <i class="fas fa-check-circle text-green-500 ml-1"></i> تنظيف خزانات
-                        </span>
+                        </a>
+                        <a href="/?service=emergency" class="bg-white px-5 py-2 rounded-full shadow-sm border border-gray-200 text-gray-700 font-semibold hover:border-amber-500 transition">
+                            <i class="fas fa-check-circle text-green-500 ml-1"></i> طوارئ 24 ساعة
+                        </a>
                     </div>
                     
                     <div class="flex flex-wrap gap-4">
@@ -320,16 +364,16 @@
     <!-- ===== خدماتنا الأساسية (بدون أسعار) ===== -->
     <section id="services" class="section-padding slant-bg">
         <div class="container-custom">
-            <div class="text-center mb-16 reveal">
+            <div id="services-header" class="text-center mb-16 reveal">
                 <h2 class="section-title center text-4xl md:text-5xl font-black text-gray-900">خدماتنا المتخصصة</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">
+                <p id="services-subtitle" class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mt-6">
                     نركز على 3 خدمات فقط، نقدمها باحترافية وجودة عالمية
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
                 <!-- 1. تسليك المجاري بالكمبروسر - بدون سعر -->
-                <div class="service-card reveal">
+                <div class="service-card reveal" id="service-drain-cleaning">
                     <img src="assets/hydro-jetting-drain-cleaning.webp" alt="تسليك مجاري بالكمبروسر الرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">🚰 تسليك المجاري بالكمبروسر</h3>
@@ -344,7 +388,7 @@
                 </div>
 
                 <!-- 2. شفط وتنظيف البيارات - بدون سعر -->
-                <div class="service-card reveal" style="transition-delay: 200ms;">
+                <div class="service-card reveal" id="service-septic-tank" style="transition-delay: 200ms;">
                     <img src="assets/sewage-truck-riyadh.webp" alt="وايت شفط بيارات بالرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">🛢️ شفط وتنظيف البيارات</h3>
@@ -359,7 +403,7 @@
                 </div>
 
                 <!-- 3. تنظيف وتعقيم الخزانات - بدون سعر -->
-                <div class="service-card reveal" style="transition-delay: 400ms;">
+                <div class="service-card reveal" id="service-tank-cleaning" style="transition-delay: 400ms;">
                     <img src="assets/water-tank-cleaning-riyadh.webp" alt="تنظيف خزانات المياه بالرياض" class="w-full h-56 object-cover rounded-t-lg">
                     <div class="p-8 flex flex-col items-center text-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">💧 تنظيف وتعقيم الخزانات</h3>
@@ -372,6 +416,13 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            
+            <!-- رابط العودة لجميع الخدمات (يظهر فقط عند فتح رابط خدمة محددة) -->
+            <div id="back-to-all" class="back-to-all">
+                <a href="/" class="btn-primary px-6 py-3 rounded-xl font-bold inline-flex items-center gap-2">
+                    <i class="fas fa-arrow-right"></i> عرض جميع الخدمات
+                </a>
             </div>
         </div>
     </section>
@@ -490,7 +541,7 @@
     <!-- ===== محتوى SEO - قوي جداً للتصدر ===== -->
     <section class="section-padding pt-0">
         <div class="container-custom">
-            <div class="seo-text-content">
+            <div class="seo-text-content" id="seo-content">
                 <h2>🏆 شركة كمبروسور اكسبريس - أفضل شركة تسليك مجاري بالرياض</h2>
                 <p>هل تبحث عن <strong>أفضل شركة تسليك مجاري بالرياض</strong>؟ مع <strong>كمبروسور اكسبريس</strong> ودّع مشاكل انسداد المجاري للأبد. نستخدم أحدث <strong>أجهزة الكمبروسر الألمانية</strong> بقوة ضغط تصل إلى 4000 PSI لإزالة أصعب الانسدادات (دهون، جذور، أشياء صلبة) بدون تكسير ولا فوضى.</p>
                 
@@ -601,35 +652,112 @@
                 phoneModal.style.display = 'none';
             }
         });
+        
+        // ===== نظام الروابط المتعددة حسب معلمات URL =====
+        function handleUrlParameters() {
+            // الحصول على معلمات URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            
+            // قائمة الخدمات مع بياناتها
+            const services = {
+                'drain-cleaning': {
+                    title: 'تسليك مجاري بالكمبروسر في الرياض | خدمة فورية',
+                    heading: 'تسليك مجاري احترافي بالكمبروسر',
+                    description: 'خدمة تسليك مجاري بالكمبروسر في الرياض - ضغط عالي 4000 PSI، بدون تكسير، ضمان 30 يوم. اتصل الآن 0576572402',
+                    subtitle: 'متخصصون في تسليك المجاري بالكمبروسر - أسرع خدمة في الرياض',
+                    seoText: '<h2>🔧 خدمة تسليك المجاري بالكمبروسر في الرياض</h2><p>نقدم خدمة <strong>تسليك المجاري بالكمبروسر</strong> بأحدث الأجهزة الألمانية التي تضغط الماء بقوة 4000 PSI لتكسير وإزالة أصعب الانسدادات (دهون متراكمة، جذور أشجار، مواد صلبة) بدون أي تكسير في الأرضيات أو الجدران.</p><p>خدمتنا تشمل تسليك المجاري الرئيسية والفرعية، أحواض المطابخ، الحمامات، والمجاري الخارجية. نضمن لك تنظيف كامل للمواسير واستعادة تدفق المياه بشكل طبيعي.</p>'
+                },
+                'septic-tank': {
+                    title: 'شفط بيارات بالرياض | وايت شفط 24 ساعة',
+                    heading: 'شفط وتنظيف البيارات بأحدث الشاحنات',
+                    description: 'خدمة شفط بيارات بالرياض - شاحنات حديثة، تعقيم كامل، التخلص الآمن. اتصل الآن 0576572402',
+                    subtitle: 'متخصصون في شفط وتنظيف البيارات - خدمة سريعة ونظيفة',
+                    seoText: '<h2>🛢️ خدمة شفط وتنظيف البيارات في الرياض</h2><p>نقدم خدمة <strong>شفط البيارات</strong> بأحدث شاحنات الشفط المجهزة لضمان إزالة كاملة للمخلفات والرواسب. نحرص على تعقيم البيارة بعد الشفط لمنع تكون البكتيريا والروائح الكريهة.</p><p>خدمتنا تشمل شفط البيارات المنزلية والتجارية، البيارات الخرسانية والبلاستيكية. نضمن التخلص الآمن من المخلفات وفق المعايير البيئية.</p>'
+                },
+                'tank-cleaning': {
+                    title: 'تنظيف خزانات بالرياض | تعقيم وشهادة صحية',
+                    heading: 'تنظيف وتعقيم خزانات المياه بمواد معتمدة',
+                    description: 'خدمة تنظيف خزانات بالرياض - مواد معتمدة، شهادة صحية، خزانات أرضية وعلوية. اتصل الآن 0576572402',
+                    subtitle: 'متخصصون في تنظيف وتعقيم الخزانات - مياه نظيفة لصحة أفضل',
+                    seoText: '<h2>💧 خدمة تنظيف وتعقيم خزانات المياه في الرياض</h2><p>نقدم خدمة <strong>تنظيف وتعقيم خزانات المياه</strong> باستخدام مواد معتمدة من وزارة الصحة السعودية. نقوم بتنظيف الخزانات الأرضية والعلوية وإزالة الرواسب والطحالب وتعقيمها بالكامل.</p><p>نوفر شهادة صحية مع كل خدمة تؤكد صلاحية المياه للاستخدام. فريقنا مدرب على أعلى مستوى للتعامل مع جميع أنواع الخزانات.</p>'
+                },
+                'emergency': {
+                    title: 'طوارئ تسليك مجاري 24 ساعة بالرياض | استجابة فورية',
+                    heading: 'خدمة طوارئ 24 ساعة - نصل خلال 30 دقيقة',
+                    description: 'خدمة طوارئ تسليك مجاري 24 ساعة بالرياض - استجابة فورية، وصول سريع، فريق متخصص. اتصل الآن 0576572402',
+                    subtitle: 'فريق طوارئ متاح 24/7 - نصل إليك أينما كنت في الرياض',
+                    seoText: '<h2>🚨 خدمة طوارئ تسليك المجاري 24 ساعة في الرياض</h2><p>نقدم <strong>خدمة طوارئ على مدار الساعة</strong> لمشاكل انسداد المجاري المفاجئة. فريقنا متاح 24 ساعة، 7 أيام في الأسبوع، بما في ذلك العطلات الرسمية.</p><p>نصل إليك خلال 30-60 دقيقة فقط من اتصالك. نوفر خدمة فورية للمنازل والفلل والمطاعم والفنادق. لا تنتظر حتى تتفاقم المشكلة، اتصل بنا الآن.</p>'
+                }
+            };
+            
+            // إذا كان هناك خدمة محددة
+            if (service && services[service]) {
+                // تحديث عنوان الصفحة
+                document.title = services[service].title;
+                
+                // تحديث وصف الميتا
+                let metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', services[service].description);
+                }
+                
+                // تحديث العنوان الرئيسي
+                const mainHeading = document.getElementById('main-heading');
+                if (mainHeading) {
+                    mainHeading.innerHTML = services[service].heading + '<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">في الرياض</span>';
+                }
+                
+                // تحديث الوصف الرئيسي
+                const mainDesc = document.getElementById('main-description');
+                if (mainDesc) {
+                    mainDesc.textContent = services[service].subtitle;
+                }
+                
+                // تحديث عنوان قسم الخدمات
+                const servicesHeader = document.getElementById('services-subtitle');
+                if (servicesHeader) {
+                    servicesHeader.textContent = services[service].subtitle;
+                }
+                
+                // تحديث محتوى SEO
+                const seoContent = document.getElementById('seo-content');
+                if (seoContent) {
+                    seoContent.innerHTML = services[service].seoText;
+                    // إضافة رقم الهاتف في النهاية
+                    seoContent.innerHTML += '<p>📞 <strong>اتصل الآن على 0576572402</strong> للحصول على خدمة فورية.</p>';
+                }
+                
+                // إخفاء جميع بطاقات الخدمات
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.style.display = 'none';
+                });
+                
+                // إظهار بطاقة الخدمة المحددة فقط
+                const selectedService = document.getElementById(`service-${service}`);
+                if (selectedService) {
+                    selectedService.style.display = 'block';
+                } else {
+                    // إذا لم يتم العثور على البطاقة، أظهر الكل
+                    document.querySelectorAll('.service-card').forEach(card => {
+                        card.style.display = 'block';
+                    });
+                }
+                
+                // إظهار زر العودة لجميع الخدمات
+                document.getElementById('back-to-all').classList.add('show');
+                
+            } else {
+                // إذا لم توجد خدمة محددة، أظهر كل الخدمات
+                document.querySelectorAll('.service-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+                document.getElementById('back-to-all').classList.remove('show');
+            }
+        }
+        
+        // تنفيذ الدالة عند تحميل الصفحة
+        window.addEventListener('load', handleUrlParameters);
     </script>
-    
-    <style>
-        /* إضافة دعم للاتجاه من اليسار لليمين للأرقام */
-        .dir-ltr {
-            direction: ltr;
-            text-align: center;
-        }
-        
-        /* تحسين مظهر بطاقات الخدمات */
-        .service-card .btn-outline {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card .btn-outline:hover {
-            background-color: var(--primary-gold);
-            color: white;
-            border-color: var(--primary-gold);
-        }
-        
-        /* تحسين مظهر شارات الخدمات */
-        .bg-white.px-5.py-2.rounded-full {
-            transition: all 0.3s ease;
-        }
-        
-        .bg-white.px-5.py-2.rounded-full:hover {
-            border-color: var(--primary-gold);
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
-        }
-    </style>
 </body>
-</html> 
+</html>
