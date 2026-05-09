@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kompressor-riyadhh.vercel.app/sitemap.xml
