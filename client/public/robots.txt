@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /district/
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://kompressor-riyadhh.vercel.app/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Allow: /district/
+
+User-agent: Bingbot
+Allow: /
+Allow: /district/
+
+Crawl-delay: 1
+Request-rate: 1/1s
