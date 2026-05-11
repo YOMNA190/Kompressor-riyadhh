@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@shared/const";
+import { reportConversion } from "@/lib/utils";
 
 /**
  * Contact Section Component
@@ -7,6 +8,7 @@ import { SITE_CONFIG } from "@shared/const";
  */
 export function ContactSection() {
   const handlePhoneClick = () => {
+    reportConversion();
     window.location.href = `tel:${SITE_CONFIG.phone}`;
   };
 

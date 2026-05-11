@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@shared/const";
+import { reportConversion } from "@/lib/utils";
 
 /**
  * Header/Navigation Component
@@ -57,13 +58,14 @@ export function Header() {
 
             <Button
               className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold rounded-lg"
-              asChild
+              onClick={() => {
+                reportConversion();
+                window.location.href = `tel:${SITE_CONFIG.phone}`;
+              }}
             >
-              <a href={`tel:${SITE_CONFIG.phone}`}>
-                <span className="hidden sm:inline">📞</span>
-                <span className="hidden lg:inline ml-2">اتصل الآن</span>
-                <span className="lg:hidden">اتصل</span>
-              </a>
+              <span className="hidden sm:inline">📞</span>
+              <span className="hidden lg:inline ml-2">اتصل الآن</span>
+              <span className="lg:hidden">اتصل</span>
             </Button>
 
             {/* Mobile Menu Toggle */}

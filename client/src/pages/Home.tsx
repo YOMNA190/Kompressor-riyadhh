@@ -15,6 +15,7 @@ import {
   generateOrganizationSchema,
 } from "@/lib/seo";
 import { SITE_CONFIG, FAQ_ITEMS } from "@shared/const";
+import { reportConversion } from "@/lib/utils";
 
 /**
  * Home Page
@@ -49,6 +50,7 @@ export default function Home() {
 
   // Handle CTA click
   const handleCallClick = () => {
+    reportConversion();
     window.location.href = `tel:${SITE_CONFIG.phone}`;
   };
 
