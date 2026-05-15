@@ -41,6 +41,10 @@
           }
         };
         gtag('event', 'conversion', {
+            'send_to': 'AW-17714550302/25ENCIrlyNgbEJ6s-v5B',
+            'event_callback': callback
+        });
+        gtag('event', 'conversion', {
             'send_to': 'AW-18152107352/xaiGCIeesqscENjazM9D',
             'event_callback': callback
         });
@@ -346,6 +350,7 @@
         if(event) event.preventDefault();
         gtag('event', 'conversion', {'send_to': 'AW-17714550302/25ENCIrlyNgbEJ6s-v5B'});
         gtag('event', 'conversion', {'send_to': 'AW-18152107352/xaiGCIeesqscENjazM9D'});
+        gtag('event', 'conversion', {'send_to': 'AW-18152084922/PrPzCK_vr6scELqry89D'});
         if(/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             setTimeout(() => window.location.href = `tel:${phone}`, 100);
         } else { showModal(); }
@@ -359,7 +364,8 @@
         directCallLink.addEventListener('click', function(e) {
             e.preventDefault();
             gtag('event', 'conversion', {'send_to': 'AW-17714550302/25ENCIrlyNgbEJ6s-v5B'});
-        gtag('event', 'conversion', {'send_to': 'AW-18152107352/xaiGCIeesqscENjazM9D'});
+            gtag('event', 'conversion', {'send_to': 'AW-18152107352/xaiGCIeesqscENjazM9D'});
+            gtag('event', 'conversion', {'send_to': 'AW-18152084922/PrPzCK_vr6scELqry89D'});
             setTimeout(() => window.location.href = `tel:${phone}`, 100);
         });
     }

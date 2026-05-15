@@ -50,6 +50,7 @@ export function Header() {
               href={SITE_CONFIG.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reportConversion()}
               className="hidden sm:inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300"
             >
               <span>💬</span>
@@ -107,6 +108,7 @@ export function Header() {
               href={SITE_CONFIG.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reportConversion()}
               className="block w-full bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center"
             >
               💬 واتساب

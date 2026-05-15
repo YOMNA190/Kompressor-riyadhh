@@ -42,6 +42,7 @@ export function ContactSection() {
             </p>
             <a
               href={`tel:${SITE_CONFIG.phone}`}
+              onClick={() => reportConversion()}
               className="inline-flex items-center gap-2 text-amber-500 font-bold hover:text-orange-500 transition-colors duration-300"
             >
               {SITE_CONFIG.phoneDisplay}
@@ -62,6 +63,7 @@ export function ContactSection() {
               href={SITE_CONFIG.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reportConversion()}
               className="inline-flex items-center gap-2 text-green-500 font-bold hover:text-green-400 transition-colors duration-300"
             >
               فتح الواتساب
@@ -107,6 +109,7 @@ export function ContactSection() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6 rounded-xl"
+              onClick={() => reportConversion()}
               asChild
             >
               <a href={SITE_CONFIG.whatsapp} target="_blank" rel="noopener noreferrer">
