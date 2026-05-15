@@ -48,12 +48,14 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17714550302"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152107352"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18152084922"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-17714550302');
       gtag('config', 'AW-18152107352');
+      gtag('config', 'AW-18152084922');
 
       function gtag_report_conversion(url) {
         var callback = function () {
@@ -63,6 +65,10 @@
         };
         gtag('event', 'conversion', {
             'send_to': 'AW-18152107352/xaiGCIeesqscENjazM9D',
+            'event_callback': callback
+        });
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18152084922/PrPzCK_vr6scELqry89D',
             'event_callback': callback
         });
         return false;
