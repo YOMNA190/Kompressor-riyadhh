@@ -15,18 +15,10 @@ export function reportConversion(url?: string) {
   };
 
   if ((window as any).gtag) {
-    // Track for all relevant conversion IDs
-    const conversionIds = [
-      'AW-18152107352/xaiGCIeesqscENjazM9D',
-      'AW-18152084922/PrPzCK_vr6scELqry89D',
-      'AW-17714550302/25ENCIrlyNgbEJ6s-v5B'
-    ];
-
-    conversionIds.forEach((id, index) => {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': id,
-        'event_callback': index === conversionIds.length - 1 ? callback : undefined
-      });
+    // Track for the new conversion ID: AW-18009279735/hCcWCMDon9IcEPeZv4tD
+    (window as any).gtag('event', 'conversion', {
+      'send_to': 'AW-18009279735/hCcWCMDon9IcEPeZv4tD',
+      'event_callback': callback
     });
 
     // Fallback if no callback was triggered (e.g. if gtag failed)
