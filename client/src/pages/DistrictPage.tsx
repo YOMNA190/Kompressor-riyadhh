@@ -225,6 +225,28 @@ export function DistrictPage({ slug }: DistrictPageProps) {
         </section>
 
         <Footer />
+        {/* Floating Buttons */}
+        <div className="fixed bottom-8 left-8 flex flex-col gap-4 z-40">
+          {/* Floating Phone Button */}
+          <button
+            onClick={handleCallClick}
+            className="w-16 h-16 rounded-full bg-amber-600 text-white flex items-center justify-center text-2xl shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce"
+            title="اتصل الآن"
+          >
+            📞
+          </button>
+          
+          {/* Floating WhatsApp Button */}
+          <a
+            href={SITE_CONFIG.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-16 h-16 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce"
+            title="تواصل عبر الواتساب"
+          >
+            💬
+          </a>
+        </div>
       </div>
     </>
   );
