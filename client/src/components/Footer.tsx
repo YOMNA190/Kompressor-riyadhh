@@ -1,4 +1,5 @@
 import { SITE_CONFIG, RIYADH_DISTRICTS } from "@shared/const";
+import { reportPhoneConversion, reportContactConversion } from "@/lib/utils";
 
 /**
  * Footer Component
@@ -31,6 +32,7 @@ export function Footer() {
                 <span className="text-amber-500">📞</span>
                 <a
                   href={`tel:${SITE_CONFIG.phone}`}
+                  onClick={() => reportPhoneConversion()}
                   className="hover:text-amber-500 transition-colors duration-300 ml-2"
                 >
                   {SITE_CONFIG.phoneDisplay}
@@ -81,6 +83,7 @@ export function Footer() {
                   href={SITE_CONFIG.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => reportContactConversion()}
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   واتساب

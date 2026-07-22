@@ -10,6 +10,7 @@ import {
   getDistrictBySlug,
 } from "@/lib/seo";
 import { SITE_CONFIG, RIYADH_DISTRICTS, FAQ_ITEMS } from "@shared/const";
+import { reportPhoneConversion } from "@/lib/utils";
 
 interface DistrictPageProps {
   slug: string;
@@ -57,6 +58,7 @@ export function DistrictPage({ slug }: DistrictPageProps) {
   ];
 
   const handleCallClick = () => {
+    reportPhoneConversion();
     window.location.href = `tel:${SITE_CONFIG.phone}`;
   };
 

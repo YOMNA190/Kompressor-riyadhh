@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SITE_CONFIG } from "@shared/const";
-import { reportConversion } from "@/lib/utils";
+import { reportPhoneConversion, reportContactConversion } from "@/lib/utils";
 
 /**
  * Header/Navigation Component
@@ -50,7 +50,7 @@ export function Header() {
               href={SITE_CONFIG.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => reportConversion()}
+              onClick={() => reportContactConversion()}
               className="hidden sm:inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300"
             >
               <span>💬</span>
@@ -60,7 +60,7 @@ export function Header() {
             <Button
               className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-bold rounded-lg"
               onClick={() => {
-                reportConversion();
+                reportPhoneConversion();
                 window.location.href = `tel:${SITE_CONFIG.phone}`;
               }}
             >
@@ -108,7 +108,7 @@ export function Header() {
               href={SITE_CONFIG.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => reportConversion()}
+              onClick={() => reportContactConversion()}
               className="block w-full bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300 text-center"
             >
               💬 واتساب
