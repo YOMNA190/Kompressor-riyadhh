@@ -27,7 +27,7 @@ export function Header() {
             </div>
             <div className="hidden sm:block">
               <h1 className="font-black text-lg text-gray-900">كمبروسور</h1>
-              <p className="text-xs text-gray-600">تسليك مجاري احترافي</p>
+              <p className="text-xs text-gray-600">تسليك مجاري احترافي (تم التحديث)</p>
             </div>
           </div>
 
