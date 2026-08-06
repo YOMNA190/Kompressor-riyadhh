@@ -93,7 +93,7 @@ export function generateLocalBusinessSchema(): SchemaMarkup {
       closes: "23:59",
     },
     sameAs: [
-      "https://wa.me/966576572402",
+      "https://wa.me/966538555718",
       "https://www.google.com/maps/search/kompressor+riyadh",
     ],
   };
@@ -180,7 +180,7 @@ export function generateOrganizationSchema(): SchemaMarkup {
       addressLocality: "الرياض",
       addressCountry: "SA",
     },
-    sameAs: ["https://wa.me/966576572402"],
+    sameAs: ["https://wa.me/966538555718"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
