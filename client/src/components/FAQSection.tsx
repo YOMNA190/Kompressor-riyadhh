@@ -58,7 +58,7 @@ export function FAQSection() {
             فريقنا جاهز للإجابة على جميع استفساراتك
           </p>
           <a
-            href="https://wa.me/966538555718"
+            href="https://wa.me/966506271272"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-amber-600 font-bold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors duration-300"

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
@@ -16,6 +16,7 @@ import {
 } from "@/lib/seo";
 import { SITE_CONFIG, FAQ_ITEMS } from "@shared/const";
 import { reportPhoneConversion } from "@/lib/utils";
+import { PhoneOfferModal } from "@/components/PhoneOfferModal";
 
 /**
  * Home Page
@@ -23,6 +24,8 @@ import { reportPhoneConversion } from "@/lib/utils";
  * Optimized for SEO and high conversion
  */
 export default function Home() {
+  const [offerModalOpen, setOfferModalOpen] = useState(true);
+
   // Generate SEO metadata
   const metadata = generateMetadata(
     SITE_CONFIG.title,
@@ -54,6 +57,8 @@ export default function Home() {
     window.location.href = `tel:${SITE_CONFIG.phone}`;
   };
 
+  const closeOfferModal = useCallback(() => setOfferModalOpen(false), []);
+
   // Smooth scroll behavior
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -65,6 +70,8 @@ export default function Home() {
   return (
     <>
       <SEOHead metadata={metadata} schemas={schemas} />
+
+      <PhoneOfferModal open={offerModalOpen} onClose={closeOfferModal} />
 
       <div className="min-h-screen bg-white">
         {/* Header */}
